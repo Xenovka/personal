@@ -1,0 +1,369 @@
+$color-primary: #131313;
+$color-secondary: #9b9b9b;
+$color-tertiary: #545454;
+$additional-color: #9b9b9b42;
+$additional-color-2: #9b9b9bbb;
+$additional-color-3: #bcbcbc;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background: black;
+  font-family: "Kanit", sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-secondary;
+  border-radius: 1rem;
+
+  &:hover {
+    background: $color-tertiary;
+  }
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+.container,
+.container-fluid {
+  height: 100vh;
+}
+
+.title,
+.number,
+.typed-cursor {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.title,
+.typed-cursor {
+  word-spacing: 0.5rem;
+  letter-spacing: 0.5rem;
+  z-index: 1;
+}
+
+.nav-item {
+  cursor: pointer;
+  margin: 4rem 2rem 0 2rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  overflow: hidden;
+
+  &:hover::after {
+    content: "";
+    display: block;
+    background: white;
+    margin-top: 0.5rem;
+    height: 0.2rem;
+    border-radius: 10px;
+    animation: line 0.2s ease;
+  }
+}
+
+.content-title {
+  width: 40rem;
+  height: 10rem;
+  left: 50%;
+  border-radius: 2rem;
+  transform: translate(-50%, -50%);
+
+  &--background {
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 800;
+    color: $additional-color;
+  }
+}
+
+.about {
+  background: $color-primary;
+
+  &__exp {
+    width: 30rem;
+    height: 40rem;
+
+    &--plus {
+      font-size: 7rem;
+    }
+
+    &--number {
+      color: $color-secondary;
+      letter-spacing: 1rem;
+      margin: 14rem 4rem 0 4rem;
+      font-size: 14rem;
+      font-weight: 600;
+    }
+
+    &--desc {
+      line-height: 4rem;
+      letter-spacing: 0.3rem;
+      margin: 0 4rem;
+      font-size: 2.6rem;
+      font-weight: 600;
+    }
+  }
+
+  &__desc {
+    margin-top: 20rem;
+    font-size: 3.4rem;
+    font-weight: 800;
+  }
+
+  &__card {
+    display: flex;
+    align-items: flex-end;
+    width: 20rem;
+    height: 20rem;
+    background: $color-secondary;
+    border-radius: 2rem;
+    margin-left: 5rem;
+    transition: all 0.1s ease;
+
+    &:hover {
+      cursor: pointer;
+      background: $additional-color-3;
+      color: black;
+    }
+
+    &--item {
+      width: 10rem;
+      margin-bottom: 4rem;
+      margin-left: 1.2rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: left;
+      transition: all 0.2s ease-in;
+    }
+  }
+}
+
+.project {
+  height: 80vh;
+
+  &__images {
+    display: flex;
+    justify-content: center;
+
+    &--item {
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
+      border-radius: 20px;
+      background-size: cover;
+      width: 30%;
+      height: 40%;
+      transition: all 0.3s ease;
+
+      &:hover {
+        filter: blur(5px);
+        cursor: pointer;
+      }
+    }
+
+    &--text {
+      position: absolute;
+      top: 80%;
+      opacity: 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  &__details {
+    position: absolute;
+    width: 30%;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    font-weight: 700;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-top: 1.2rem;
+      transform: translateX(-50%);
+      display: block;
+      width: 30%;
+      height: 0.1rem;
+      border: 1px solid white;
+      border-radius: 20px;
+      background: white;
+    }
+  }
+}
+
+.contact {
+  background: $color-primary;
+  height: 90vh;
+
+  &__title {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      margin-left: 16rem;
+      font-size: 8rem;
+      font-weight: 800;
+      color: $additional-color-2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 40%;
+      background: $color-secondary;
+      width: 0.1rem;
+      height: 40rem;
+      border: 1px solid $color-secondary;
+      border-radius: 10px;
+    }
+  }
+
+  &__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+
+    &--input {
+      border: none;
+      border-bottom: 0.5px solid $color-secondary;
+      background: none;
+      font-size: 2rem;
+      font-weight: 100;
+      color: white;
+      width: 60rem;
+      height: 4rem;
+      margin-bottom: 3rem;
+      transition: all 0.2s ease-in-out;
+
+      &:focus {
+        outline: none;
+        border-bottom: 3px solid white;
+      }
+    }
+
+    &--button {
+      display: block;
+      outline: none;
+      background: $color-secondary;
+      color: white;
+      padding: 0.8rem 2rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.card-up {
+  margin-bottom: 5rem;
+  transition: all 0.2s ease-in;
+}
+
+.link-text {
+  position: absolute;
+  display: block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.completed-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 800;
+  color: $color-secondary;
+}
+
+.home-button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  text-decoration: none;
+  flex-direction: column;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: black;
+  border-radius: 10px;
+  display: inline-block;
+  background: $additional-color-3;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: white;
+    background: $color-tertiary;
+  }
+}
+
+.footer {
+  height: 20vh;
+
+  &__paragraph {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $additional-color-3;
+  }
+}
+
+@keyframes line {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .title,
+  .typed-cursor {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+}
