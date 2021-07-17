@@ -30,8 +30,8 @@ body {
   display: none;
 }
 
-.container,
-.container-fluid {
+.container-xl,
+.container-xxl {
   height: 100vh;
 }
 
@@ -288,7 +288,6 @@ body {
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 10px;
-  overflow: hidden;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -499,6 +498,12 @@ body {
   }
   .contact__label {
     font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .contact__form {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
