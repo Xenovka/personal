@@ -1,5 +1,5 @@
 new Typed(".title", {
-  strings: ["HI, VISITORS.", "HI, I AM XENOVKA.", "WELCOME TO MY SITE."],
+  strings: ["HI, VISITORS.", "HI, I AM WENDY.", "WELCOME TO MY SITE."],
   backDelay: 500,
   typeSpeed: 50,
   backSpeed: 50,
